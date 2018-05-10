@@ -16,6 +16,12 @@ const styles = StyleSheet.create({
         //backgroundColor: '#DA7B61'
     },
 
+    InboxView: {
+        flex: 1,
+        backgroundColor: '#fff',
+        padding: 15
+    },
+
     tr:{
         flexDirection: 'row',
         width: '100%',
@@ -148,53 +154,55 @@ class Inbox extends Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-            <ScrollView>
-            <View style={[styles.mainMenu]}>
-                <Text style={[styles.heading]}>Inbox</Text>
-                <Text>You have 3 unread messages</Text>
-            </View>
-            <View style={styles.container}>
-            {
-                this.state.dataSource.map((item, index) => {
-                    if(item.status !== "Review"){
-                        return (
-                            <TouchableOpacity style={[styles.tr]} key={index} onPress={()=> navigate('Chat')}>
-                                <View style={styles.trImgView}>
-                                    <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
-                                </View>
-                                <View style={[styles.messageBox]}>
-                                    <Text style={[styles.messageTitle, item.status == "Confirmed" ? styles.discussion : styles.review]}>{item.user} - {item.status}</Text>
-                                    <Text style={[styles.messageSubTitle]}>{item.date}</Text>
-                                    <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
-                                    <Text style={[styles.messageSubTitle]}>{item.message}</Text>
-                                </View>
-                            </TouchableOpacity>
-                        )
-                    }else{
-                        return (
-                            <View key={index} style={[styles.tr]}>
-                                <View style={styles.trImgView}>
-                                    <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
-                                </View>
-                                <View style={[styles.messageBox]}>
-                                    <Text style={[styles.messageTitle, styles.review]}>{item.user} - {item.status}</Text>
-                                    <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
-                                    <Text numberOfLines={3} style={[styles.messageSubTitle]}>{item.date}</Text>
-                                    <TouchableOpacity onPress={() =>console.log('here')}>
-                                        <View style={styles.LogInButton}>
-                                            <Text style={styles.buttonText}>
-                                                Write Review
-                                            </Text>
+            <View style={styles.InboxView}>
+                <ScrollView>
+                    <View style={[styles.mainMenu]}>
+                        <Text style={[styles.heading]}>Inbox</Text>
+                        <Text>You have 3 unread messages</Text>
+                    </View>
+                    <View style={styles.container}>
+                        {
+                            this.state.dataSource.map((item, index) => {
+                                if(item.status !== "Review"){
+                                    return (
+                                        <TouchableOpacity style={[styles.tr]} key={index} onPress={()=> navigate('Chat')}>
+                                            <View style={styles.trImgView}>
+                                                <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
+                                            </View>
+                                            <View style={[styles.messageBox]}>
+                                                <Text style={[styles.messageTitle, item.status == "Confirmed" ? styles.discussion : styles.review]}>{item.user} - {item.status}</Text>
+                                                <Text style={[styles.messageSubTitle]}>{item.date}</Text>
+                                                <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
+                                                <Text style={[styles.messageSubTitle]}>{item.message}</Text>
+                                            </View>
+                                        </TouchableOpacity>
+                                    )
+                                }else{
+                                    return (
+                                        <View key={index} style={[styles.tr]}>
+                                            <View style={styles.trImgView}>
+                                                <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
+                                            </View>
+                                            <View style={[styles.messageBox]}>
+                                                <Text style={[styles.messageTitle, styles.review]}>{item.user} - {item.status}</Text>
+                                                <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
+                                                <Text numberOfLines={3} style={[styles.messageSubTitle]}>{item.date}</Text>
+                                                <TouchableOpacity onPress={() =>console.log('here')}>
+                                                    <View style={styles.LogInButton}>
+                                                        <Text style={styles.buttonText}>
+                                                            Write Review
+                                                        </Text>
+                                                    </View>
+                                                </TouchableOpacity>
+                                            </View>
                                         </View>
-                                    </TouchableOpacity>
-                                </View>
-                             </View>
-                        )
-                    }
-                })
-            }
+                                    )
+                                }
+                            })
+                        }
+                    </View>
+                </ScrollView>
             </View>
-            </ScrollView>
         );
     }
 }
