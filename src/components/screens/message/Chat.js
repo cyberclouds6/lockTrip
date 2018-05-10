@@ -141,7 +141,7 @@ class Chat extends Component {
                         // value={this.state.text} for future
                     />
 
-                    <TouchableOpacity onPress={this.sendMessage}>
+                    <TouchableOpacity onPress={this.onCameraPress}>
 
                         <Image style={styles.btn_cameraImage} source={require('../../../../src/assets/camera.png')} />
 
