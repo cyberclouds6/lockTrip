@@ -5,6 +5,7 @@ import { getTopHomes } from '../../../utils/requester';
 import DateAndGuestPicker from '../../organisms/DateAndGuestPicker';
 import SearchBar from '../../molecules/SearchBar';
 import SmallPropertyTile from '../../molecules/SmallPropertyTile';
+import SplashScreen from 'react-native-smart-splash-screen';
 
 
 // TODO: move styles in separate file
@@ -74,6 +75,15 @@ class Explore extends Component {
             guests: 0,
             topHomes: null
         };
+    }
+
+    componentWillMount(){
+        //Remove Splash
+        SplashScreen.close({
+            animationType: SplashScreen.animationType.scale,
+            duration: 0,
+            delay: 0,
+        })
     }
 
     componentDidMount() {

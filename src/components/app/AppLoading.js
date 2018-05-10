@@ -34,9 +34,9 @@ class AppLoading extends Component {
     componentDidMount() {
         SplashScreen.close({
             animationType: SplashScreen.animationType.scale,
-            duration: 150,
-            delay: 100
-        });
+            duration: 850,
+            delay: 500,
+        })
     }
 
   // Fetch the token from storage then navigate to our appropriate place

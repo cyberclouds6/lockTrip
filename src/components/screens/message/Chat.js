@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 import ImagePicker from 'react-native-image-picker';
-import requester from '../../../utils/requester';
+import Requester, { getCurrencyRates, sendMessage } from '../../../utils/requester';
 import styles from './styles';
 import GoBack from '../../atoms/GoBack';
 
@@ -141,7 +141,7 @@ class Chat extends Component {
                         // value={this.state.text} for future
                     />
 
-                    <TouchableOpacity onPress={this.onCameraPress}>
+                    <TouchableOpacity onPress={this.sendMessage}>
 
                         <Image style={styles.btn_cameraImage} source={require('../../../../src/assets/camera.png')} />
 
@@ -179,7 +179,14 @@ class Chat extends Component {
     }
 
     sendMessage = () => {
-        requester.sendMessage('message');
+        sendMessage('amad',17)
+        .then(response => {
+            console.log(response)
+        })
+        .catch(function(error){
+            console.log(error);
+        })
+        console.log('api hit');
     }
 }
 

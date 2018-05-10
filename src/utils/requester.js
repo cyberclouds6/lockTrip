@@ -2,6 +2,7 @@ import { AsyncStorage } from 'react-native';
 import { apiHost, domainPrefix } from '../config';
 
 const host = apiHost;
+
 const { fetch } = global;
 const RequestMethod = {
     GET: 0,
@@ -124,4 +125,10 @@ export async function approveMessage(id) {
 export async function declineMessage(id) {
     //TODO: Update actual API endpoint
     return sendRequest(`${host}decline/${id}`, RequestMethod.GET).then(res => res.response.json());
+}
+
+export async function sendMessage(messageObj, id) {
+    return sendRequest(`${host}users/me/conversations/${id}`, RequestMethod.POST, messageObj).then(res => {
+        return res;
+    });
 }
