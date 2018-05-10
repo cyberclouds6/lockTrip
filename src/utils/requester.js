@@ -115,3 +115,13 @@ export async function getMyConversations(searchTerm) {
         return res.response.json();
     });
 }
+
+export async function approveMessage(id) {
+    //TODO: Update actual API endpoint
+    return sendRequest(`${host}approve/${id}`, RequestMethod.GET).then(res => res.response.json());
+}
+
+export async function declineMessage(id) {
+    //TODO: Update actual API endpoint
+    return sendRequest(`${host}decline/${id}`, RequestMethod.GET).then(res => res.response.json());
+}

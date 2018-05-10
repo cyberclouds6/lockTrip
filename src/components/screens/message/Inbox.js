@@ -6,7 +6,7 @@ import FontAwesome, { Icons } from 'react-native-fontawesome';
 //import GoBack from '../common/GoBack';
 import { ListView  } from 'react-native';
 import SplashScreen from 'react-native-smart-splash-screen';
-import { getMyConversations } from '../../../utils/requester';
+import { getMyConversations, approveMessage, declineMessage } from '../../../utils/requester';
 
 // TODO: Component styling to be kept as a separate file
 const styles = StyleSheet.create({
@@ -144,7 +144,7 @@ class Inbox extends Component {
         };
     }
 
-    getConversations = () => {
+    getMyConversations = () => {
         getMyConversations()
             .then(res => {
                 if(res) {
@@ -156,8 +156,26 @@ class Inbox extends Component {
             .catch(e => console.log(e));
     }
 
+    approveMessage = (id) => {
+        approveMessage(id)
+            .then(res => {
+                //Show success message
+            })
+            .catch(e => console.log(e));
+    }
+
+    declineMessage = (id) => {
+        declineMessage(id)
+            .then(res => {
+                if(res) {
+                    //Show success message
+                }
+            })
+            .catch(e => console.log(e));
+    }
+
     componentDidMount() {
-        // this.getConversations();
+        // this.getMyConversations();
 
         SplashScreen.close({
             animationType: SplashScreen.animationType.scale,
