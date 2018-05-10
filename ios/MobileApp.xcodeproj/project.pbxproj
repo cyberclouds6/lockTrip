@@ -33,6 +33,8 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* MobileAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MobileAppTests.m */; };
+		4186B20620A47746006F88D9 /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4186B1DE20A4771C006F88D9 /* libRCTCameraRoll.a */; };
+		4186B20720A4774F006F88D9 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4186B20520A47732006F88D9 /* libRNImagePicker.a */; };
 		462BFACC204FE8B900E32BF8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 462BFACB204FE8B800E32BF8 /* LaunchScreen.xib */; };
 		4687AA0820525437000F3A9D /* FuturaStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4687A9E120525437000F3A9D /* FuturaStd-Light.otf */; };
 		469D81A22051E4B400C506F6 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 469D817B2051E4B400C506F6 /* FontAwesome.otf */; };
@@ -226,6 +228,20 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
+		4186B1DD20A4771C006F88D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4186B1D420A4771C006F88D9 /* RCTCameraRoll.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTCameraRoll;
+		};
+		4186B20420A47732006F88D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4186B20020A47732006F88D9 /* RNImagePicker.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 014A3B5C1C6CF33500B6D375;
+			remoteInfo = RNImagePicker;
+		};
 		46A6F552204F4C6700BF95D4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46A6F540204F4C6700BF95D4 /* RCTSplashScreen.xcodeproj */;
@@ -348,6 +364,8 @@
 		2D02E47B1E0B4A5D006451C7 /* MobileApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MobileApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* MobileApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MobileApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4186B1D420A4771C006F88D9 /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
+		4186B20020A47732006F88D9 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNImagePicker.xcodeproj; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; };
 		462BFACB204FE8B800E32BF8 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = MobileApp/LaunchScreen.xib; sourceTree = "<group>"; };
 		4687A9E120525437000F3A9D /* FuturaStd-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FuturaStd-Light.otf"; sourceTree = "<group>"; };
 		469D817B2051E4B400C506F6 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -372,6 +390,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4186B20720A4774F006F88D9 /* libRNImagePicker.a in Frameworks */,
+				4186B20620A47746006F88D9 /* libRCTCameraRoll.a in Frameworks */,
 				46A6F58F204F4FBC00BF95D4 /* libRCTSplashScreen.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
@@ -539,6 +559,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4186B1D520A4771C006F88D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4186B1DE20A4771C006F88D9 /* libRCTCameraRoll.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4186B20120A47732006F88D9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4186B20520A47732006F88D9 /* libRNImagePicker.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		469D817A2051E4B400C506F6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -577,6 +613,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				4186B20020A47732006F88D9 /* RNImagePicker.xcodeproj */,
+				4186B1D420A4771C006F88D9 /* RCTCameraRoll.xcodeproj */,
 				46A6F540204F4C6700BF95D4 /* RCTSplashScreen.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -762,6 +800,10 @@
 					ProjectRef = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
 				},
 				{
+					ProductGroup = 4186B1D520A4771C006F88D9 /* Products */;
+					ProjectRef = 4186B1D420A4771C006F88D9 /* RCTCameraRoll.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
 					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
 				},
@@ -800,6 +842,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 4186B20120A47732006F88D9 /* Products */;
+					ProjectRef = 4186B20020A47732006F88D9 /* RNImagePicker.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -979,6 +1025,20 @@
 			fileType = archive.ar;
 			path = libjschelpers.a;
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4186B1DE20A4771C006F88D9 /* libRCTCameraRoll.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCameraRoll.a;
+			remoteRef = 4186B1DD20A4771C006F88D9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4186B20520A47732006F88D9 /* libRNImagePicker.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNImagePicker.a;
+			remoteRef = 4186B20420A47732006F88D9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		46A6F553204F4C6700BF95D4 /* libRCTSplashScreen.a */ = {

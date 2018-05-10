@@ -12,19 +12,19 @@ const styles = StyleSheet.create({
     },
     iconView: {
         position: 'absolute',
-        top: 40,
+        top: 30,
         left: 18,
         width: 24,
         height: 24,
         borderRadius: 12,
-        borderColor: '#fff',
+        borderColor: '#000000',
         borderWidth: 1.5,
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
     },
     iconText: {
-        color: '#fff',
+        color: '#000',
         fontSize: 8
     }
 });

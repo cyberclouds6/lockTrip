@@ -1,146 +1,36 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView  } from 'react-native';
+import {
+ Platform,
+    Text,
+    View,
+    Image,
+    FlatList,
+    TextInput,
+    KeyboardAvoidingView,
+    TouchableOpacity
+} from 'react-native';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
-//import Image from 'react-native-remote-svg';
-//import GoBack from '../common/GoBack';
-import { ListView  } from 'react-native';
-//import { GiftedChat } from 'react-native-gifted-chat';
-
-// TODO: Component styling to be kept as a separate file
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        flexDirection: 'column',
-        marginTop: 50
-        //backgroundColor: '#DA7B61'
-    },
-
-    tr:{
-        flexDirection: 'row',
-        width: '100%',
-        height: 'auto',  
-        alignItems: 'center',
-        justifyContent: 'flex-start',
-        paddingBottom: 50,
-        borderBottomWidth: 1,
-        borderBottomColor: '#eeeeee',
-    },
-
-    messageBox:{
-       width: '80%'
-    },
-
-    messageView:{
-      height: 400,
-      marginTop: 50 
-    },
-
-    messageTitle:{
-        fontSize: 21,
-        fontWeight: 500,
-       // color: '#DA7B61',
-        fontWeight: 'bold',
-        letterSpacing: 1,
-        backgroundColor: 'transparent'
-    },
-
-    messageSubTitle:{
-        //fontSize: Sizes.scale(12),
-        //color: '#DA7B61',
-        fontSize: 18,
-        fontWeight: '200',
-        letterSpacing: 1,
-        backgroundColor: 'transparent'
-    },
-
-    trImgView:{
-        width: 90,
-        marginBottom: '20%'
-    },
-
-    trAvatar:{
-        height: 50,
-        width: 50,
-        left: 20,
-        borderRadius: 25,
-    },
-    
-    review:{
-       color: '#aeebf2'
-    },
-
-    discussion:{
-        color: '#DA7B61',
-    },
-
-    heading: {
-        fontSize: 30,
-        fontWeight: '400',
-       // color: '#DA7B61',
-        fontWeight: 'normal',
-        letterSpacing: 1,
-        backgroundColor: 'transparent'
-    },
-
-    mainMenu:{
-        //alignItems: 'center',
-        marginTop: 80,
-        justifyContent: 'center',
-    },
-
-    message:{
-       justifyContent: 'flex-start', 
-    },
-
-    ApproveButton: {
-        height: 50,
-        width: 180,
-        backgroundColor: '#DA7B61',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    DeclineButton: {
-        height: 50,
-        width: 180,
-        backgroundColor: '#fff',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center'
-    },
-
-    ApproveText: {
-        color: '#fff',
-        fontSize: 17,
-        fontFamily: 'FuturaStd-Light'
-    },
-
-    DeclineText: {
-        color: '#000',
-        fontSize: 17,
-        fontFamily: 'FuturaStd-Light'
-    },
-
-    buttonView: {
-        display: 'flex',
-        justifyContent: 'center',
-        flexDirection: 'column',
-        //paddingTop: '20'
-    }
-});
+import ImagePicker from 'react-native-image-picker';
+import requester from '../../../utils/requester';
+import styles from './styles';
+import GoBack from '../../atoms/GoBack';
 
 const inbox = [
-    {user: "Jesse", status: "Confirmed", time: "10:05 am", date: "Thu 25 Jan - Sat 27 Jan", venue: "Garden Laft Apartment", message: "Hi Jaime! I am going to be arriving in Florence on Thursday arround noon. Looking forward to meeting you! Jesse"},
-    {user: "Taylor", status: "Discussion", time: "8:15 am", date: "Sat 3 Feb - Web 7 Feb", venue: "Crazy Bright Studio Apartment", message: "Hi Jaime! I am going to be arriving in Florence on Thursday arround noon. Looking forward to meeting you! Jesse"},
-    {user: "Jeniffer", status: "Review", time: "Yesterday", date: "13 days left to review", venue: "Lovely City Center Apartment"}
+    {
+        user: 'Jesse', status: 'Confirmed', time: '10:05 am', date: 'Thu 25 Jan - Sat 27 Jan', venue: 'Garden Laft Apartment', message: 'Hi Jaime! I am going to be arriving in Florence on Thursday arround noon. Looking forward to meeting you! Jesse'
+    },
+    {
+        user: 'Taylor', status: 'Discussion', time: '8:15 am', date: 'Sat 3 Feb - Web 7 Feb', venue: 'Crazy Bright Studio Apartment', message: 'Hi Jaime! I am going to be arriving in Florence on Thursday arround noon. Looking forward to meeting you! Jesse'
+    },
+    {
+        user: 'Jeniffer', status: 'Review', time: 'Yesterday', date: '13 days left to review', venue: 'Lovely City Center Apartment'
+    }
 
-    ]
+];
 
-class Inbox extends Component {
+class Chat extends Component {
+
     static propTypes = {
         navigation: PropTypes.shape({
             navigate: PropTypes.func
@@ -152,64 +42,145 @@ class Inbox extends Component {
             navigate: () => {}
         }
     }
+
     constructor(props) {
         super(props);
-        const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-        this.state = {
-            dataSource: inbox,
-            messages: []
-        };
     }
 
     componentDidMount() {
         this.setState({
-      messages: [
-        {
-          _id: 1,
-          text: 'Hello developer',
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            name: 'React Native',
-            avatar: 'https://facebook.github.io/react/img/logo_og.png',
-          },
-        },
-      ],
-    })
+
+        });
     }
+
     render() {
-       // const { navigate } = this.props.navigation;
+        const { navigate } = this.props.navigation;
+        const dicti = [{
+            key: 'sender',
+            value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
+            field: 'ios'
+        }, {
+            key: 'receiver',
+            value: 'hi jesse, whenever you feel like',
+            field: 'android'
+        }, {
+            key: 'senderR',
+            value: 'When can we talk??',
+            field: 'ios'
+        },
+        {
+            key: 'sender',
+            value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
+            field: 'ios'
+        }];
+
         return (
-            <ScrollView>
-            <View style={[styles.mainMenu]}>
-            <View style={[styles.messageBox]}>
-            <Text style={styles.DeclineText}>Conversation with Jesse</Text>
-            <Text style={styles.DeclineText}>Garden Laft Apartment</Text>
-            <Text style={styles.DeclineText}>Thu 25 Jan - Sat 27 Jan. 2 guest. $615</Text>
-                <View style={[styles.buttonView]}>
-                <TouchableOpacity onPress={() =>console.log('here')}>
-                    <View style={styles.ApproveButton}>
-                        <Text style={styles.ApproveText}>
-                            Approve
-                        </Text>
-                    </View>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() =>console.log('here')}>
-                    <View style={styles.DeclineButton}>
-                        <Text style={styles.DeclineText}>
-                            Decline
-                        </Text>
-                    </View>
-                </TouchableOpacity>
-            </View>
-            </View>
-            <View style={styles.container}>
-            </View>
-            </View>
-            </ScrollView>
+            <KeyboardAvoidingView style={styles.container} behavior={(Platform.OS === 'ios') ? 'padding' : null} enabled>
+
+              <View style={styles.chatToolbar}>
+                <GoBack
+                style={{color: 'blue', }}
+                  onPress={() => navigate('Inbox')}
+                  icon="arrowLeft"/>
+              </View>
+
+                <FlatList style={styles.listBg}
+
+                    data={dicti}// Data source
+
+                    renderItem={({ item }) =>
+
+                        (<View>{/* Main View inside flat list */}
+
+                            <View style={item.field === 'ios' && styles.rowStyle}>{/* User 1 View inside flat list */}
+
+                                <Image
+                    style={item.field === 'ios' && styles.imageStyle}
+                    source={{
+                                        uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'
+                                    }}
+                                />
+
+                                <View style={item.field === 'ios' && styles.viewStyle}>
+
+                    <Text style={item.field === 'ios' && styles.listChild}>{item.field === 'ios' && item.value}</Text>
+
+                                </View>
+
+                            </View>
+
+                            <View style={item.field === 'android' && styles.rowStyle}>{/* User 2 View inside flat list */}
+
+                                <View style={item.field === 'android' && styles.viewStyleSender}>
+
+                                    <Text style={item.field === 'android' && styles.listChildSender}>{item.field === 'android' && item.value}</Text>
+
+                                </View>
+
+                                <Image
+                                    style={item.field === 'android' && styles.imageStyle}
+                                    source={{
+                                        uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'
+                                    }}
+                                />
+
+                            </View>
+
+                        </View>)
+                    }
+                />
+
+
+                <View style={styles.footerView}>{/* Footer View for sending message etc */}
+
+                    <TextInput
+                                                style={styles.footerInputText}
+                        underlineColorAndroid="rgba(0,0,0,0)" // Removing android underline for default edittext
+                        placeholder="Write message"
+                        // onChangeText={(text) => this.setState({text})} for future
+                        // value={this.state.text} for future
+                    />
+
+                    <TouchableOpacity onPress={this.onCameraPress}>
+
+                        <Image style={styles.btn_cameraImage} source={require('../../../../src/assets/camera.png')} />
+
+                    </TouchableOpacity>
+
+                    <TouchableOpacity onPress={this.onGalleryPress}>
+
+                        <Image style={styles.btn_galleryImage} source={require('../../../../src/assets/gallery.png')} />
+
+                    </TouchableOpacity>
+
+                </View>
+
+            </KeyboardAvoidingView>// Ending Main View
         );
+    }
+
+    // Methods
+    onCameraPress = () => {
+        // ImagePickerIOS.openSelectDialog({}, imageUri => {
+        //   this.setState({ image: imageUri });
+        // }, error => console.log(error));
+        // ImagePicker.launchCamera(this.options, (response)  => {
+        //   // Same code as in above section!
+        // });
+        ImagePicker.launchCamera({}, (response) => {
+        // Same code as in above section!
+        });
+    }
+
+    onGalleryPress = () => {
+        ImagePicker.launchImageLibrary({}, (response) => {
+        // Same code as in above section!
+        });
+    }
+
+    sendMessage = () => {
+        requester.sendMessage('message');
     }
 }
 
-export default Inbox;
-
+export default Chat;

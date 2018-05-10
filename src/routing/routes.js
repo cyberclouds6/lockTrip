@@ -22,6 +22,7 @@ export const LoginNavigator = StackNavigator(
         CreatePassword: { screen: CreatePassword },
         Terms: { screen: Terms },
         Chat: { screen: Chat },
+        Inbox: { screen: Inbox },
     },
     {
         initialRouteName: 'Welcome',
