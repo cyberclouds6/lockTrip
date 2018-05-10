@@ -109,3 +109,9 @@ export function getTopHomes() {
 export async function getPropertyById(id) {
     return sendRequest(`${host}listings/${id}`, RequestMethod.GET).then(res => res.response.json());
 }
+
+export async function getMyConversations(searchTerm) {
+    return sendRequest(`${host}users/me/conversations${searchTerm !== null && searchTerm !== undefined ? `${searchTerm}&` : '?'}sort=id,desc`, RequestMethod.GET).then(res => {
+        return res.response.json();
+    });
+}

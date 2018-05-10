@@ -5,6 +5,7 @@ import FontAwesome, { Icons } from 'react-native-fontawesome';
 //import Image from 'react-native-remote-svg';
 //import GoBack from '../common/GoBack';
 import { ListView  } from 'react-native';
+import SplashScreen from 'react-native-smart-splash-screen';
 
 // TODO: Component styling to be kept as a separate file
 const styles = StyleSheet.create({
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
     tr:{
         flexDirection: 'row',
         width: '100%',
-        height: 'auto',  
+        height: 'auto',
         alignItems: 'center',
         justifyContent: 'flex-start',
         paddingBottom: 50,
@@ -32,7 +33,7 @@ const styles = StyleSheet.create({
 
     messageView:{
       height: 400,
-      marginTop: 50 
+      marginTop: 50
     },
 
     messageTitle:{
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
         left: 20,
         borderRadius: 25,
     },
-    
+
     review:{
        color: '#aeebf2'
     },
@@ -89,7 +90,7 @@ const styles = StyleSheet.create({
     },
 
     message:{
-       justifyContent: 'flex-start', 
+       justifyContent: 'flex-start',
     },
 
     LogInButton: {
@@ -137,7 +138,13 @@ class Inbox extends Component {
     }
 
     componentDidMount() {
+        SplashScreen.close({
+            animationType: SplashScreen.animationType.scale,
+            duration: 850,
+            delay: 500,
+        })
     }
+
     render() {
         const { navigate } = this.props.navigation;
         return (
@@ -149,11 +156,11 @@ class Inbox extends Component {
             <View style={styles.container}>
             {
                 this.state.dataSource.map((item, index) => {
-                    if(item.status !== "Review"){      
+                    if(item.status !== "Review"){
                         return (
                             <TouchableOpacity style={[styles.tr]} key={index} onPress={()=> navigate('Chat')}>
                                 <View style={styles.trImgView}>
-                                    <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>    
+                                    <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
                                 </View>
                                 <View style={[styles.messageBox]}>
                                     <Text style={[styles.messageTitle, item.status == "Confirmed" ? styles.discussion : styles.review]}>{item.user} - {item.status}</Text>
