@@ -2,7 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {
     Text,
-    View
+    View,
+    TouchableOpacity
 } from 'react-native';
 import Image from 'react-native-remote-svg';
 
@@ -31,10 +32,14 @@ const Welcome = ({
                 text="Log In"
                 wrapStyle={styles.logInButton}
             />
-            <Button
+            <TouchableOpacity style={styles.facebookButton}>
+                    <Image style={styles.btn_facebookIcon} source={require('../../../../src/assets/icons/facebook-icon.png')} />
+                    <Text style={styles.facebookButtonText}>Continue with Facebook</Text>
+                </TouchableOpacity>
+            {/* <Button
                 wrapStyle={styles.facebookButton}
                 text="Continue with Facebook"
-            />
+            /> */}
             <Button
                 wrapStyle={styles.createAccountButton}
                 onPress={() => navigate('CreateAccount')}

@@ -91,7 +91,13 @@ const styles = StyleSheet.create({
     getStartedImage: {
         width: 400,
         height: 80
-    }
+    },
+    btn_backImage:{
+        height: 28,
+        width: 28,
+        marginTop: 24,
+        marginLeft: 16,
+      }
 });
 
 
@@ -135,10 +141,13 @@ class CreateAccount extends Component {
 
         return (
             <View style={styles.container}>
-                <GoBack
-                    onPress={() => navigate('Welcome')}
-                    icon="arrowLeft"
-                />
+                <View style={styles.chatToolbar}>
+                
+                <TouchableOpacity onPress={this.onBackPress}>
+                    <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-white.png')} />
+                </TouchableOpacity>
+
+            </View>
 
                 <View style={styles.main}>
                     <View style={styles.titleView}><Text style={styles.titleText}>Create Account</Text></View>
@@ -238,6 +247,9 @@ class CreateAccount extends Component {
                 </View>
             </View>
         );
+    }
+    onBackPress = () => {
+        this.props.navigation.navigate('Welcome');
     }
 }
 

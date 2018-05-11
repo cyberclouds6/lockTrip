@@ -25,7 +25,7 @@ export default StyleSheet.create({
     datesPickerViewComplete: {
         display: 'flex',
         flexDirection: 'row',
-        width: 210,
+        flex : 1,
         height: 50,
         backgroundColor: '#f0f1f3',
         borderColor: '#dbdbdb',

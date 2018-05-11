@@ -52,7 +52,13 @@ const styles = StyleSheet.create({
     getStartedImage: {
         width: 400,
         height: 80
-    }
+    },
+    btn_backImage:{
+        height: 28,
+        width: 28,
+        marginTop: 24,
+        marginLeft: 16,
+      }
 });
 
 export default styles;

@@ -78,10 +78,13 @@ class Login extends Component {
                 accessible={false}
             >
                 <View style={styles.container}>
-                    <GoBack
-                        onPress={() => navigate('Welcome')}
-                        icon="arrowLeft"
-                    />
+                    <View style={styles.chatToolbar}>
+                
+                        <TouchableOpacity onPress={this.onBackPress}>
+                            <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-white.png')} />
+                        </TouchableOpacity>
+
+                    </View>
 
                     <View style={styles.main}>
                         <View style={styles.titleView}>
@@ -135,6 +138,10 @@ class Login extends Component {
                 </View>
             </TouchableWithoutFeedback>
         );
+    }
+
+    onBackPress = () => {
+        this.props.navigation.navigate('Welcome');
     }
 }
 

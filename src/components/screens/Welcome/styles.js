@@ -26,7 +26,13 @@ const styles = StyleSheet.create({
     },
     facebookButton: {
         backgroundColor: 'black',
-        elevation: 3
+        flexDirection: 'row',
+        height: 50,
+        borderRadius: 30,
+        justifyContent: 'center',
+        alignItems: 'center',
+        // elevation: 3,
+        // flex: 1
     },
     createAccountButton: {
         marginTop: 20
@@ -55,6 +61,14 @@ const styles = StyleSheet.create({
     getStartedImage: {
         width: 400,
         height: 80
+    },
+    btn_facebookIcon:{
+        width: 8,
+        height: 18,
+        marginRight: 10,
+    },
+    facebookButtonText:{
+        color: '#fff'
     }
 });
 

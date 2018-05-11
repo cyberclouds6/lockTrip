@@ -9,17 +9,20 @@ const styles = StyleSheet.create({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: 50
+        width: 50,
     },
     leftIconText: {
         color: '#5a5a5c',
-        fontSize: 20
+        fontSize: 20,
+        marginTop: 12,
     },
     container: {
         display: 'flex',
         flexDirection: 'row',
         backgroundColor: '#fff',
-        height: 50
+        height: 50,
+        borderWidth: 0.5,
+        borderColor: '#ccc'
     },
     input: {
         flex: 1,

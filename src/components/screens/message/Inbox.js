@@ -13,29 +13,42 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        marginTop: 50
-        //backgroundColor: '#DA7B61'
+        marginTop: 50,
     },
 
     InboxView: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#f0f1f3',
         padding: 15
     },
 
     tr:{
-        flexDirection: 'row',
         width: '100%',
         height: 'auto',
-        alignItems: 'center',
-        justifyContent: 'flex-start',
         paddingBottom: 50,
         borderBottomWidth: 1,
         borderBottomColor: '#eeeeee',
     },
+    trTopView:{
+        flex: 1,
+        flexDirection: 'row',
+        marginBottom: 10,
+    },
 
+    trImgView:{
+        width: '20%',
+    },
+    trAvatar:{
+        height: 50,
+        width: 50,
+        borderRadius: 25,
+    },
+    
     messageBox:{
-       width: '80%'
+       width: '80%',
+    },
+
+    trBottomView:{
     },
 
     messageView:{
@@ -44,10 +57,9 @@ const styles = StyleSheet.create({
     },
 
     messageTitle:{
-        fontSize: 21,
-        fontWeight: 500,
+        fontFamily: 'Futura',
+        fontSize: 16,
        // color: '#DA7B61',
-        fontWeight: 'bold',
         letterSpacing: 1,
         backgroundColor: 'transparent'
     },
@@ -55,37 +67,28 @@ const styles = StyleSheet.create({
     messageSubTitle:{
         //fontSize: Sizes.scale(12),
         //color: '#DA7B61',
-        fontSize: 18,
+        fontFamily: 'FuturaStd-Light',
+        fontSize: 14,
         fontWeight: '200',
         letterSpacing: 1,
         backgroundColor: 'transparent'
     },
 
-    trImgView:{
-        width: 90,
-        marginBottom: '20%'
-    },
 
-    trAvatar:{
-        height: 50,
-        width: 50,
-        left: 20,
-        borderRadius: 25,
-    },
+
 
     review:{
-       color: '#aeebf2'
+       color: '#a7c8c2'
     },
 
     discussion:{
-        color: '#DA7B61',
+        color: '#cc8068',
     },
 
     heading: {
-        fontSize: 30,
-        fontWeight: '400',
+        fontFamily: 'FuturaStd-Light',
+        fontSize: 24,
        // color: '#DA7B61',
-        fontWeight: 'normal',
         letterSpacing: 1,
         backgroundColor: 'transparent'
     },
@@ -102,7 +105,7 @@ const styles = StyleSheet.create({
 
     LogInButton: {
         height: 50,
-        width: 180,
+        width: "100%",
         backgroundColor: '#DA7B61',
         display: 'flex',
         flexDirection: 'row',
@@ -114,7 +117,40 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 17,
         fontFamily: 'FuturaStd-Light'
-    }
+    },
+
+    btn_backImage:{
+        height: 28,
+        width: 28,
+        marginTop: 24,
+        marginLeft: 16,
+      },
+      userView:{
+          flex: 1,
+          flexDirection: 'row',
+      },
+      leftView:{
+        width: '65%',
+      },
+      rightView:{
+        width: '30%',
+        alignItems: 'center',
+        justifyContent: 'center'
+      },
+      messageTimeTitle:{
+          fontFamily: 'FuturaStd-Light',
+          fontSize: 14
+      },
+      lastView:{
+        width: '5%',
+        justifyContent: 'center'
+      },
+      statusView:{
+          width: 10,
+          height: 10,
+          borderRadius: 10 / 2,
+          backgroundColor: '#cc8068',
+      },
 });
 
 const inbox = [
@@ -188,10 +224,17 @@ class Inbox extends Component {
         const { navigate } = this.props.navigation;
         return (
             <View style={styles.InboxView}>
+            <View style={styles.chatToolbar}>
+                
+                {/* <TouchableOpacity onPress={this.onBackPress}>
+                    <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-black.png')} />
+                </TouchableOpacity> */}
+
+                </View>
                 <ScrollView>
                     <View style={[styles.mainMenu]}>
                         <Text style={[styles.heading]}>Inbox</Text>
-                        <Text>You have 3 unread messages</Text>
+                        <Text style={{fontFamily: 'FuturaStd-Light', fontSize: 12, color:'#222'}}>You have 3 unread messages</Text>
                     </View>
                     <View style={styles.container}>
                         {
@@ -199,27 +242,47 @@ class Inbox extends Component {
                                 if(item.status !== "Review"){
                                     return (
                                         <TouchableOpacity style={[styles.tr]} key={index} onPress={()=> navigate('Chat')}>
-                                            <View style={styles.trImgView}>
-                                                <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
+                                            <View style={styles.trTopView}>
+                                                <View style={styles.trImgView}>
+                                                    <Image source={require('../../../assets/icons/receiverImage.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
+                                                </View>
+                                                <View style={[styles.messageBox]}>
+                                                    <View style={[styles.userView]}>
+                                                        <View style={[styles.leftView]}>
+                                                            <Text style={[styles.messageTitle, item.status == "Confirmed" ? styles.discussion : styles.review]}>{item.user} - {item.status}</Text>
+                                                        </View>
+                                                        <View style={[styles.rightView]}>
+                                                            <Text style={[styles.messageTimeTitle]}>10:05 am</Text>
+                                                        </View>
+                                                        <View style={[styles.lastView]}>
+                                                            <View style={[styles.statusView]}></View>
+                                                        </View>
+                                                    </View>
+                                                        
+                                                    <Text style={[styles.messageSubTitle,{marginBottom:2, marginTop:10}]}>{item.date}</Text>
+                                                    <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
+                                                </View>
                                             </View>
-                                            <View style={[styles.messageBox]}>
-                                                <Text style={[styles.messageTitle, item.status == "Confirmed" ? styles.discussion : styles.review]}>{item.user} - {item.status}</Text>
-                                                <Text style={[styles.messageSubTitle]}>{item.date}</Text>
-                                                <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
-                                                <Text style={[styles.messageSubTitle]}>{item.message}</Text>
+                                            <View style={styles.trBottomView}>
+                                                <Text style={[styles.messageSubTitle,{lineHeight: 16}]}>{item.message}</Text>
                                             </View>
                                         </TouchableOpacity>
                                     )
                                 }else{
                                     return (
                                         <View key={index} style={[styles.tr]}>
+                                        <View style={styles.trTopView}>
                                             <View style={styles.trImgView}>
-                                                <Image source={require('../../../assets/splash.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
+                                                <Image source={require('../../../assets/icons/senderImages.png')} style={[styles.trAvatar]} resizeMode={"cover"}/>
                                             </View>
-                                            <View style={[styles.messageBox]}>
-                                                <Text style={[styles.messageTitle, styles.review]}>{item.user} - {item.status}</Text>
-                                                <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
-                                                <Text numberOfLines={3} style={[styles.messageSubTitle]}>{item.date}</Text>
+                                                <View style={[styles.messageBox]}>
+                                                    <Text style={[styles.messageTitle, styles.review]}>{item.user} - {item.status}</Text>
+                                                    <Text numberOfLines={3} style={[styles.messageSubTitle,{marginBottom:2, marginTop:10}]}>{item.date}</Text>
+                                                    <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
+                                                </View>
+                                            </View>
+                                            <View style={styles.trBottomView}>
+                                                <Text style={[styles.messageSubTitle]}>{item.message}</Text>
                                                 <TouchableOpacity onPress={() =>console.log('here')}>
                                                     <View style={styles.LogInButton}>
                                                         <Text style={styles.buttonText}>
@@ -238,6 +301,9 @@ class Inbox extends Component {
             </View>
         );
     }
+    // onBackPress = () => {
+    //     this.props.navigation.navigate('App');
+    // }
 }
 
 export default Inbox;

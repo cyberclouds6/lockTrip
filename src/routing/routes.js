@@ -10,6 +10,10 @@ import Terms from '../components/screens/Terms';
 import Inbox from '../components/screens/message/Inbox';
 import Chat from '../components/screens/message/Chat';
 
+import Profile from '../components/screens/Profile/index';
+import Favourites from '../components/screens/Favorites/index';
+import MyTrips from '../components/screens/MyTrips/index';
+
 import Explore from '../components/screens/Explore';
 import NavTabBar from '../components/organisms/NavTabBar';
 
@@ -25,17 +29,17 @@ export const LoginNavigator = StackNavigator(
         Inbox: { screen: Inbox },
     },
     {
-        initialRouteName: 'Chat',
+        initialRouteName: 'Welcome',
         headerMode: 'none'
     }
 );
 
 export const MainNavigator = TabNavigator(
     {
-        PROFILE: { screen: Explore },
+        PROFILE: { screen: Profile },
         MESSAGES: { screen: Inbox },
-        MY_TRIPS: { screen: Explore },
-        FAVORITES: { screen: Explore },
+        MY_TRIPS: { screen: MyTrips },
+        FAVORITES: { screen: Favourites },
         EXPLORE: { screen: Explore }
     },
     {

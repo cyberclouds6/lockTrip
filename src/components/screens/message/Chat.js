@@ -9,27 +9,15 @@ import {
     TextInput,
     KeyboardAvoidingView,
     TouchableOpacity,
-    ToolbarAndroid
+    ToolbarAndroid,
+    Button
 } from 'react-native';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 import ImagePicker from 'react-native-image-picker';
 import Requester, { getCurrencyRates, sendMessage } from '../../../utils/requester';
 import styles from './styles';
-import GoBack from '../../atoms/GoBack';
 import SplashScreen from 'react-native-smart-splash-screen';
 
-const inbox = [
-    {
-        user: 'Jesse', status: 'Confirmed', time: '10:05 am', date: 'Thu 25 Jan - Sat 27 Jan', venue: 'Garden Laft Apartment', message: 'Hi Jaime! I am going to be arriving in Florence on Thursday arround noon. Looking forward to meeting you! Jesse'
-    },
-    {
-        user: 'Taylor', status: 'Discussion', time: '8:15 am', date: 'Sat 3 Feb - Web 7 Feb', venue: 'Crazy Bright Studio Apartment', message: 'Hi Jaime! I am going to be arriving in Florence on Thursday arround noon. Looking forward to meeting you! Jesse'
-    },
-    {
-        user: 'Jeniffer', status: 'Review', time: 'Yesterday', date: '13 days left to review', venue: 'Lovely City Center Apartment'
-    }
-
-];
 
 class Chat extends Component {
 
@@ -71,36 +59,16 @@ class Chat extends Component {
             value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
             field: 'ios',
             date: '12 Jan'
-        }, {
-            key: 'receiver',
-            value: 'hi jesse, whenever you feel like',
+        },{
+            key: 'sender',
+            value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
             field: 'android',
-            date: '13 Jan'
-        }, {
-            key: 'senderR',
-            value: 'When can we talk??',
-            field: 'ios',
-            date: '13 Jan'
-        },  {
-            key: 'receiver',
-            value: 'hi jesse, whenever you feel like',
-            field: 'android',
-            date: '13 Jan'
+            date: '15 Jan'
         },{
             key: 'sender',
             value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
             field: 'ios',
             date: '15 Jan'
-        }, {
-            key: 'receiver',
-            value: 'hi jesse, whenever you feel like',
-            field: 'android',
-            date: '13 Jan'
-        }, {
-            key: 'receiver',
-            value: 'hi jesse, whenever you feel like',
-            field: 'android',
-            date: '13 Jan'
         },];
 
         return (
@@ -114,14 +82,27 @@ class Chat extends Component {
 
                 </View>
 
+                <View style={styles.requestView}>
+                    <Text style={styles.requestTo}>Conversation with Jesse</Text>
+                    <Text style={styles.requestTitle}>Garden Left Apartment</Text>
+                    <Text style={styles.requestDate}>Thu 25 Jan - Sat 27 Jan . 2 guests . $615</Text>
+                    <View style={styles.requestButtonView}>
+                        <TouchableOpacity style={styles.btn_requestapproveView}>
+                            <Text style={styles.btn_requestapprove}>Approve</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.btn_requestdeclineView}>
+                            <Text style={styles.btn_requestdecline}>Decline</Text>
+                        </TouchableOpacity>
+                    
+                    </View>
+                </View>
+
                 <FlatList style={styles.listBg}
-
                     data={dicti}// Data source
-
                     renderItem={({ item }) =>
-
                         (<View>{/* Main View inside flat list */}
-                            <View style={item.field === 'ios' && styles.rowStyle}>{/* User 1 View inside flat list */}
+                            
+                            <View style={item.field === 'ios' ? styles.rowStyle : styles.hiddenRow}>{/* User 1 View inside flat list */}
                                 <Image style={item.field === 'ios' && styles.imageStyle} source={{
                                         uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'
                                     }}
@@ -131,23 +112,18 @@ class Chat extends Component {
                                 <Text style={item.field === 'ios' && styles.listChild}>{item.field === 'ios' && item.date}</Text>
                                 </View>
                             </View>
-                            <View style={item.field === 'android' && styles.rowStyleSender}>{/* User 2 View inside flat list */}
-
+                            <View style={item.field === 'android' ? styles.rowStyleSender : styles.hiddenRow}>{/* User 2 View inside flat list */}
                                 <View style={item.field === 'android' && styles.viewStyleSender}>
-
                                     <Text style={item.field === 'android' && styles.listChildSender}>{item.field === 'android' && item.value}</Text>
                                     <Text style={item.field === 'android' && styles.listChildSender}>{item.field === 'android' && item.date}</Text>
-
                                 </View>
-
-                                <Image
-                                    style={item.field === 'android' && styles.imageStyleSender}
-                                    source={{
-                                        uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'
-                                    }}
-                                />
+                                <Image style={item.field === 'android' &&
+                                 styles.imageStyleSender} 
+                                 source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}/>
 
                             </View>
+
+                            
 
                         </View>)
                     }
@@ -201,7 +177,7 @@ class Chat extends Component {
         });
     }
     onBackPress = () => {
-        
+        this.props.navigation.navigate('Inbox');
     }
 
     sendMessage = () => {
