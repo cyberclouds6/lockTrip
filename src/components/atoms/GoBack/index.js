@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     },
     iconView: {
         position: 'absolute',
-        top: 30,
+        
         left: 18,
         width: 24,
         height: 24,

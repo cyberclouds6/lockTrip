@@ -25,7 +25,7 @@ export const LoginNavigator = StackNavigator(
         Inbox: { screen: Inbox },
     },
     {
-        initialRouteName: 'Welcome',
+        initialRouteName: 'Chat',
         headerMode: 'none'
     }
 );
@@ -52,6 +52,6 @@ export const AppNavigator = SwitchNavigator(
         App: MainNavigator
     },
     {
-        initialRouteName: 'App'
+        initialRouteName: 'Login'
     }
 );

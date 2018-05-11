@@ -7,8 +7,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#000',
       },
       chatToolbar: {
-        height: 60,
-        flexDirection: 'column',
         backgroundColor: '#f0f1f3'
       },
       listBg: {
@@ -17,32 +15,33 @@ const styles = StyleSheet.create({
       rowStyle: {
         flex: 1,
         flexDirection: 'row',
-        alignItems: 'flex-end'
+        alignItems: 'flex-end',
+        marginRight: 40
       },
       imageStyle: {
-        height: 50,
-        width: 50,
+        height: 40,
+        width: 40,
         marginLeft: 8,
         marginRight: 8,
-        borderRadius: 50 / 2
+        borderRadius: 40 / 2
       },
       viewStyle: {
-        marginTop: 10,
         flex: 1,
         marginLeft: 5,
-        marginRight: 40,
         borderWidth: 1,
         borderColor: '#fff',
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
-        borderBottomRightRadius: 20,
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
+        borderBottomRightRadius: 15,
         borderBottomLeftRadius: 3,
         backgroundColor: 'white'
       },
       listChild: {
+        fontFamily: 'FuturaStd-Light',
+        fontSize: 12,
         padding: 5,
         margin: 10,
-        color: '#5e6163'
+        color: '#1f2427'
       },
       rowStyleSender: {
         flex: 1,
@@ -50,23 +49,27 @@ const styles = StyleSheet.create({
         alignItems: 'flex-end'
       },
       imageStyleSender: {
-        height: 50,
-        width: 50,
+        height: 40,
+        width: 40,
+        marginLeft: 8,
+        marginRight: 8,
+        borderRadius: 40 / 2
       },
       viewStyleSender: {
         flex: 1,
         marginLeft: 40,
         marginRight: 5,
         borderWidth: 1,
-        marginBottom: 15,
-        borderTopLeftRadius: 20,
-        borderTopRightRadius: 20,
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
         borderBottomRightRadius: 3,
-        borderBottomLeftRadius: 20,
+        borderBottomLeftRadius: 15,
         backgroundColor: '#d97b61',
         borderColor: 'white'
       },
       listChildSender: {
+        fontFamily: 'FuturaStd-Light',
+        fontSize: 12,
         padding: 5,
         margin: 10,
         color: 'white'
@@ -101,6 +104,12 @@ const styles = StyleSheet.create({
         width: 50,
         marginRight: 10,
       },
+      btn_backImage:{
+        height: 28,
+        width: 28,
+        marginTop: 24,
+        marginLeft: 16,
+      }
 });
 
 export default styles;
