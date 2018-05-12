@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     backButton: {
         height: 120,
         padding: 15,
-        justifyContent: 'center'
+        // justifyContent: 'center'
     },
     backButtonIcon: {
         fontSize: 22
@@ -159,7 +159,13 @@ const styles = StyleSheet.create({
         color: '#cc8068',
         paddingTop: 20,
         paddingBottom: 20,
-    }
+    },
+    btn_backImage:{
+        height: 28,
+        width: 28,
+        marginTop: 24,
+        marginLeft: 16,
+      },
 });
 
 class Profile extends Component {
@@ -235,8 +241,8 @@ class Profile extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableOpacity style={styles.backButton} onPress={() => this.props.navigation.navigate('EXPLORE')}>
-                    {/* <Icon name="arrow-left-circle" style={styles.backButtonIcon}/> */}
+                <TouchableOpacity onPress={this.onBackPress} style={styles.backButton}>
+                    <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-black.png')} />
                 </TouchableOpacity>
                 <ScrollView>
                     <View style={styles.cardContainer}>
@@ -294,6 +300,10 @@ class Profile extends Component {
                 </ScrollView>
             </View>
         )
+    }
+
+    onBackPress = () => {
+        this.props.navigation.navigate('EXPLORE');
     }
 }
 

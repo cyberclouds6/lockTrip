@@ -177,7 +177,7 @@ class Chat extends Component {
         });
     }
     onBackPress = () => {
-        this.props.navigation.navigate('Inbox');
+        this.props.navigation.navigate('MESSAGES');
     }
 
     sendMessage = () => {

@@ -25,7 +25,7 @@ const Welcome = ({
     <View style={styles.container}>
         <GoBack />
         <Image source={SplashPNG} style={styles.splashImage} />
-        <Text style={styles.titleText}>Welcome to LockTrip</Text>
+        <Text style={styles.titleText}>Welcome</Text>
         <View style={styles.buttonCollectionWrap}>
             <Button
                 onPress={() => navigate('Login')}

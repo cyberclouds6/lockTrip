@@ -34,6 +34,24 @@
 		<string>unicode.futurab.ttf</string>
 		<string>unicode.futurabb.ttf</string>
 		<string>Futura-Light-font.ttf</string>
+		<string>futur.otf</string>
+		<string>Futura Bold font.otf</string>
+		<string>Futura Bold Italic font.otf</string>
+		<string>Futura Book font.otf</string>
+		<string>Futura Book Italic font.otf</string>
+		<string>Futura Extra Black font.otf</string>
+		<string>Futura Heavy font.otf</string>
+		<string>Futura Heavy Italic font.otf</string>
+		<string>futura light bt.otf</string>
+		<string>Futura Light Italic font.otf</string>
+		<string>futura medium bt.otf</string>
+		<string>futura medium condensed bt.otf</string>
+		<string>Futura Medium Italic font.otf</string>
+		<string>Futura XBlk BT.otf</string>
+		<string>Futura-Light-font.otf</string>
+		<string>tt0205m_.otf</string>
+		<string>unicode.futurab.otf</string>
+		<string>unicode.futurabb.otf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

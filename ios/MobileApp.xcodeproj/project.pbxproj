@@ -64,6 +64,24 @@
 		C6D3ED03ABBC4479B84D562E /* Futura-Light-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3A0DBBB054C4099A298DB79 /* Futura-Light-font.ttf */; };
 		573A5320011445C8AD9FBBAB /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7A351767D8C94BC89FD5D832 /* FontAwesome.otf */; };
 		44A4E5A8B9964F008463110A /* FuturaStd-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 55991C48828743F695FCC7F9 /* FuturaStd-Light.otf */; };
+		C70A95E5CA0D4F5DA3D96B3F /* futur.otf in Resources */ = {isa = PBXBuildFile; fileRef = 585EFAC6BAE24018AE832639 /* futur.otf */; };
+		6E677188D76D4A53BFF49A79 /* Futura Bold font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F9B0E28F94F452F874BD6F3 /* Futura Bold font.otf */; };
+		9C991B017355432B81C88470 /* Futura Bold Italic font.otf in Resources */ = {isa = PBXBuildFile; fileRef = C9866A43811748ADA6B2E5FD /* Futura Bold Italic font.otf */; };
+		8A05D2051A9E41699482E372 /* Futura Book font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1F796688AA864646AAC587C6 /* Futura Book font.otf */; };
+		9001F07AC4554FDFBB973242 /* Futura Book Italic font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9A5284539E3B4AD29E1E936D /* Futura Book Italic font.otf */; };
+		5CAC8A8A657942409F842A87 /* Futura Extra Black font.otf in Resources */ = {isa = PBXBuildFile; fileRef = B46C94FBE4A244A587C94BCE /* Futura Extra Black font.otf */; };
+		8E5F74F5260144A7AD3A31A3 /* Futura Heavy font.otf in Resources */ = {isa = PBXBuildFile; fileRef = E7D469906D334C22970AE2CA /* Futura Heavy font.otf */; };
+		B86988CCA159453CBF2E96D1 /* Futura Heavy Italic font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7F924F57D49F433084DB2368 /* Futura Heavy Italic font.otf */; };
+		9807A49291A140D8B1C72C96 /* futura light bt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7E3932521084422F874DE04B /* futura light bt.otf */; };
+		F2A5EB22F1934BBAAE70A15E /* Futura Light Italic font.otf in Resources */ = {isa = PBXBuildFile; fileRef = CA9E3637E17F4E3B802588B9 /* Futura Light Italic font.otf */; };
+		E88B5B97A178464FA4AD8876 /* futura medium bt.otf in Resources */ = {isa = PBXBuildFile; fileRef = E9878039D913436BBF913428 /* futura medium bt.otf */; };
+		F384A8073D394666ADE62FD8 /* futura medium condensed bt.otf in Resources */ = {isa = PBXBuildFile; fileRef = 24AD19619A6E4C3AA98B7DD1 /* futura medium condensed bt.otf */; };
+		8F8D96AA58864A5F902B9FD6 /* Futura Medium Italic font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6B99D57FFF6B4867ABF01D8D /* Futura Medium Italic font.otf */; };
+		9F3C3EC287BD43E98601126B /* Futura XBlk BT.otf in Resources */ = {isa = PBXBuildFile; fileRef = 494D6232A7754080A2D4E618 /* Futura XBlk BT.otf */; };
+		0199BB856C84470199B63261 /* Futura-Light-font.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F7C7E09273E49A5BB11DCC9 /* Futura-Light-font.otf */; };
+		90FAD545CA864B739EBA09EE /* tt0205m_.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32D6FC8299B44770BEA91F08 /* tt0205m_.otf */; };
+		4B4EB5B157E542BDA5952EB4 /* unicode.futurab.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0383990BCAE74DBD88B80C87 /* unicode.futurab.otf */; };
+		8C2103F6F9CF40F7BFE79B58 /* unicode.futurabb.otf in Resources */ = {isa = PBXBuildFile; fileRef = F0363EC3E4214365AFEE22DC /* unicode.futurabb.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -418,6 +436,24 @@
 		C3A0DBBB054C4099A298DB79 /* Futura-Light-font.ttf */ = {isa = PBXFileReference; name = "Futura-Light-font.ttf"; path = "../src/assets/fonts/Futura-Light-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7A351767D8C94BC89FD5D832 /* FontAwesome.otf */ = {isa = PBXFileReference; name = "FontAwesome.otf"; path = "../src/assets/fonts/FontAwesome.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		55991C48828743F695FCC7F9 /* FuturaStd-Light.otf */ = {isa = PBXFileReference; name = "FuturaStd-Light.otf"; path = "../src/assets/fonts/FuturaStd-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		585EFAC6BAE24018AE832639 /* futur.otf */ = {isa = PBXFileReference; name = "futur.otf"; path = "../src/assets/fonts/futur.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1F9B0E28F94F452F874BD6F3 /* Futura Bold font.otf */ = {isa = PBXFileReference; name = "Futura Bold font.otf"; path = "../src/assets/fonts/Futura Bold font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C9866A43811748ADA6B2E5FD /* Futura Bold Italic font.otf */ = {isa = PBXFileReference; name = "Futura Bold Italic font.otf"; path = "../src/assets/fonts/Futura Bold Italic font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1F796688AA864646AAC587C6 /* Futura Book font.otf */ = {isa = PBXFileReference; name = "Futura Book font.otf"; path = "../src/assets/fonts/Futura Book font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9A5284539E3B4AD29E1E936D /* Futura Book Italic font.otf */ = {isa = PBXFileReference; name = "Futura Book Italic font.otf"; path = "../src/assets/fonts/Futura Book Italic font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B46C94FBE4A244A587C94BCE /* Futura Extra Black font.otf */ = {isa = PBXFileReference; name = "Futura Extra Black font.otf"; path = "../src/assets/fonts/Futura Extra Black font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E7D469906D334C22970AE2CA /* Futura Heavy font.otf */ = {isa = PBXFileReference; name = "Futura Heavy font.otf"; path = "../src/assets/fonts/Futura Heavy font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7F924F57D49F433084DB2368 /* Futura Heavy Italic font.otf */ = {isa = PBXFileReference; name = "Futura Heavy Italic font.otf"; path = "../src/assets/fonts/Futura Heavy Italic font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7E3932521084422F874DE04B /* futura light bt.otf */ = {isa = PBXFileReference; name = "futura light bt.otf"; path = "../src/assets/fonts/futura light bt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CA9E3637E17F4E3B802588B9 /* Futura Light Italic font.otf */ = {isa = PBXFileReference; name = "Futura Light Italic font.otf"; path = "../src/assets/fonts/Futura Light Italic font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E9878039D913436BBF913428 /* futura medium bt.otf */ = {isa = PBXFileReference; name = "futura medium bt.otf"; path = "../src/assets/fonts/futura medium bt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		24AD19619A6E4C3AA98B7DD1 /* futura medium condensed bt.otf */ = {isa = PBXFileReference; name = "futura medium condensed bt.otf"; path = "../src/assets/fonts/futura medium condensed bt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6B99D57FFF6B4867ABF01D8D /* Futura Medium Italic font.otf */ = {isa = PBXFileReference; name = "Futura Medium Italic font.otf"; path = "../src/assets/fonts/Futura Medium Italic font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		494D6232A7754080A2D4E618 /* Futura XBlk BT.otf */ = {isa = PBXFileReference; name = "Futura XBlk BT.otf"; path = "../src/assets/fonts/Futura XBlk BT.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2F7C7E09273E49A5BB11DCC9 /* Futura-Light-font.otf */ = {isa = PBXFileReference; name = "Futura-Light-font.otf"; path = "../src/assets/fonts/Futura-Light-font.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		32D6FC8299B44770BEA91F08 /* tt0205m_.otf */ = {isa = PBXFileReference; name = "tt0205m_.otf"; path = "../src/assets/fonts/tt0205m_.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0383990BCAE74DBD88B80C87 /* unicode.futurab.otf */ = {isa = PBXFileReference; name = "unicode.futurab.otf"; path = "../src/assets/fonts/unicode.futurab.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F0363EC3E4214365AFEE22DC /* unicode.futurabb.otf */ = {isa = PBXFileReference; name = "unicode.futurabb.otf"; path = "../src/assets/fonts/unicode.futurabb.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -745,6 +781,24 @@
 				C3A0DBBB054C4099A298DB79 /* Futura-Light-font.ttf */,
 				7A351767D8C94BC89FD5D832 /* FontAwesome.otf */,
 				55991C48828743F695FCC7F9 /* FuturaStd-Light.otf */,
+				585EFAC6BAE24018AE832639 /* futur.otf */,
+				1F9B0E28F94F452F874BD6F3 /* Futura Bold font.otf */,
+				C9866A43811748ADA6B2E5FD /* Futura Bold Italic font.otf */,
+				1F796688AA864646AAC587C6 /* Futura Book font.otf */,
+				9A5284539E3B4AD29E1E936D /* Futura Book Italic font.otf */,
+				B46C94FBE4A244A587C94BCE /* Futura Extra Black font.otf */,
+				E7D469906D334C22970AE2CA /* Futura Heavy font.otf */,
+				7F924F57D49F433084DB2368 /* Futura Heavy Italic font.otf */,
+				7E3932521084422F874DE04B /* futura light bt.otf */,
+				CA9E3637E17F4E3B802588B9 /* Futura Light Italic font.otf */,
+				E9878039D913436BBF913428 /* futura medium bt.otf */,
+				24AD19619A6E4C3AA98B7DD1 /* futura medium condensed bt.otf */,
+				6B99D57FFF6B4867ABF01D8D /* Futura Medium Italic font.otf */,
+				494D6232A7754080A2D4E618 /* Futura XBlk BT.otf */,
+				2F7C7E09273E49A5BB11DCC9 /* Futura-Light-font.otf */,
+				32D6FC8299B44770BEA91F08 /* tt0205m_.otf */,
+				0383990BCAE74DBD88B80C87 /* unicode.futurab.otf */,
+				F0363EC3E4214365AFEE22DC /* unicode.futurabb.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1254,6 +1308,24 @@
 				C6D3ED03ABBC4479B84D562E /* Futura-Light-font.ttf in Resources */,
 				573A5320011445C8AD9FBBAB /* FontAwesome.otf in Resources */,
 				44A4E5A8B9964F008463110A /* FuturaStd-Light.otf in Resources */,
+				C70A95E5CA0D4F5DA3D96B3F /* futur.otf in Resources */,
+				6E677188D76D4A53BFF49A79 /* Futura Bold font.otf in Resources */,
+				9C991B017355432B81C88470 /* Futura Bold Italic font.otf in Resources */,
+				8A05D2051A9E41699482E372 /* Futura Book font.otf in Resources */,
+				9001F07AC4554FDFBB973242 /* Futura Book Italic font.otf in Resources */,
+				5CAC8A8A657942409F842A87 /* Futura Extra Black font.otf in Resources */,
+				8E5F74F5260144A7AD3A31A3 /* Futura Heavy font.otf in Resources */,
+				B86988CCA159453CBF2E96D1 /* Futura Heavy Italic font.otf in Resources */,
+				9807A49291A140D8B1C72C96 /* futura light bt.otf in Resources */,
+				F2A5EB22F1934BBAAE70A15E /* Futura Light Italic font.otf in Resources */,
+				E88B5B97A178464FA4AD8876 /* futura medium bt.otf in Resources */,
+				F384A8073D394666ADE62FD8 /* futura medium condensed bt.otf in Resources */,
+				8F8D96AA58864A5F902B9FD6 /* Futura Medium Italic font.otf in Resources */,
+				9F3C3EC287BD43E98601126B /* Futura XBlk BT.otf in Resources */,
+				0199BB856C84470199B63261 /* Futura-Light-font.otf in Resources */,
+				90FAD545CA864B739EBA09EE /* tt0205m_.otf in Resources */,
+				4B4EB5B157E542BDA5952EB4 /* unicode.futurab.otf in Resources */,
+				8C2103F6F9CF40F7BFE79B58 /* unicode.futurabb.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

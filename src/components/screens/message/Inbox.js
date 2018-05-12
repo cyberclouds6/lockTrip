@@ -13,21 +13,22 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        marginTop: 50,
+        marginHorizontal: 15,
     },
 
     InboxView: {
         flex: 1,
         backgroundColor: '#f0f1f3',
-        padding: 15
     },
 
     tr:{
         width: '100%',
         height: 'auto',
-        paddingBottom: 50,
-        borderBottomWidth: 1,
-        borderBottomColor: '#eeeeee',
+        paddingTop: 25,
+        paddingBottom: 25,
+        borderBottomWidth: 0.5,
+        borderBottomColor: '#ccc',
+        paddingRight: 10,
     },
     trTopView:{
         flex: 1,
@@ -36,7 +37,7 @@ const styles = StyleSheet.create({
     },
 
     trImgView:{
-        width: '20%',
+        width: '18%',
     },
     trAvatar:{
         height: 50,
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     },
     
     messageBox:{
-       width: '80%',
+       width: '82%',
     },
 
     trBottomView:{
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     },
 
     messageTitle:{
-        fontFamily: 'Futura',
+        fontFamily: 'futura',
         fontSize: 16,
        // color: '#DA7B61',
         letterSpacing: 1,
@@ -70,12 +71,17 @@ const styles = StyleSheet.create({
         fontFamily: 'FuturaStd-Light',
         fontSize: 14,
         fontWeight: '200',
+        lineHeight: 15,
         letterSpacing: 1,
         backgroundColor: 'transparent'
     },
-
-
-
+    messageValues:{
+        fontFamily: 'FuturaStd-Light',
+        fontSize: 14,
+        lineHeight: 24,
+        letterSpacing: 1,
+        backgroundColor: 'transparent'
+    },
 
     review:{
        color: '#a7c8c2'
@@ -86,16 +92,21 @@ const styles = StyleSheet.create({
     },
 
     heading: {
-        fontFamily: 'FuturaStd-Light',
-        fontSize: 24,
-       // color: '#DA7B61',
-        letterSpacing: 1,
-        backgroundColor: 'transparent'
+        fontFamily: 'futura',
+        fontSize: 20,
+        color: '#000',
+        marginBottom: 10,
+        color:'#222'
     },
-
+    subHeading:{
+        fontFamily: 'FuturaStd-Light',
+        fontSize: 12,
+        color:'#222'
+    },
     mainMenu:{
         //alignItems: 'center',
-        marginTop: 80,
+        marginHorizontal: 20,
+        marginTop: 10,
         justifyContent: 'center',
     },
 
@@ -105,7 +116,7 @@ const styles = StyleSheet.create({
 
     LogInButton: {
         height: 50,
-        width: "100%",
+        width: "50%",
         backgroundColor: '#DA7B61',
         display: 'flex',
         flexDirection: 'row',
@@ -124,8 +135,10 @@ const styles = StyleSheet.create({
         width: 28,
         marginTop: 24,
         marginLeft: 16,
+        marginBottom: 20,
       },
       userView:{
+          marginTop: 5,
           flex: 1,
           flexDirection: 'row',
       },
@@ -226,15 +239,15 @@ class Inbox extends Component {
             <View style={styles.InboxView}>
             <View style={styles.chatToolbar}>
                 
-                {/* <TouchableOpacity onPress={this.onBackPress}>
+                <TouchableOpacity onPress={this.onBackPress}>
                     <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-black.png')} />
-                </TouchableOpacity> */}
+                </TouchableOpacity>
 
                 </View>
                 <ScrollView>
                     <View style={[styles.mainMenu]}>
                         <Text style={[styles.heading]}>Inbox</Text>
-                        <Text style={{fontFamily: 'FuturaStd-Light', fontSize: 12, color:'#222'}}>You have 3 unread messages</Text>
+                        <Text style={styles.subHeading}>You have 3 unread messages</Text>
                     </View>
                     <View style={styles.container}>
                         {
@@ -259,12 +272,12 @@ class Inbox extends Component {
                                                         </View>
                                                     </View>
                                                         
-                                                    <Text style={[styles.messageSubTitle,{marginBottom:2, marginTop:10}]}>{item.date}</Text>
+                                                    <Text style={[styles.messageSubTitle,{marginBottom:2, marginTop:5}]}>{item.date}</Text>
                                                     <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
                                                 </View>
                                             </View>
                                             <View style={styles.trBottomView}>
-                                                <Text style={[styles.messageSubTitle,{lineHeight: 16}]}>{item.message}</Text>
+                                                <Text style={[styles.messageValues,]}>{item.message}</Text>
                                             </View>
                                         </TouchableOpacity>
                                     )
@@ -277,12 +290,12 @@ class Inbox extends Component {
                                             </View>
                                                 <View style={[styles.messageBox]}>
                                                     <Text style={[styles.messageTitle, styles.review]}>{item.user} - {item.status}</Text>
-                                                    <Text numberOfLines={3} style={[styles.messageSubTitle,{marginBottom:2, marginTop:10}]}>{item.date}</Text>
+                                                    <Text numberOfLines={3} style={[styles.messageSubTitle,{marginBottom:2, marginTop:5}]}>{item.date}</Text>
                                                     <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
                                                 </View>
                                             </View>
                                             <View style={styles.trBottomView}>
-                                                <Text style={[styles.messageSubTitle]}>{item.message}</Text>
+                                                <Text style={[styles.messageValues]}>{item.message}</Text>
                                                 <TouchableOpacity onPress={() =>console.log('here')}>
                                                     <View style={styles.LogInButton}>
                                                         <Text style={styles.buttonText}>
@@ -301,9 +314,9 @@ class Inbox extends Component {
             </View>
         );
     }
-    // onBackPress = () => {
-    //     this.props.navigation.navigate('App');
-    // }
+    onBackPress = () => {
+        this.props.navigation.navigate('PROFILE');
+    }
 }
 
 export default Inbox;
