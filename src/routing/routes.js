@@ -7,8 +7,8 @@ import Login from '../components/screens/Login';
 import CreateAccount from '../components/screens/CreateAccount';
 import CreatePassword from '../components/screens/CreatePassword';
 import Terms from '../components/screens/Terms';
-import Inbox from '../components/screens/Message/Inbox';
-import Chat from '../components/screens/Message/Chat';
+import Inbox from '../components/screens/Chat/Inbox';
+import Chat from '../components/screens/Chat/Chat';
 
 import Profile from '../components/screens/Profile/index';
 import Favourites from '../components/screens/Favorites/index';
