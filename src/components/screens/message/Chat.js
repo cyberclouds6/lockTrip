@@ -12,6 +12,7 @@ import {
     ToolbarAndroid,
     Button
 } from 'react-native';
+import {ListItem,Avatar} from 'react-native-elements';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 import ImagePicker from 'react-native-image-picker';
 import Requester, { getCurrencyRates, sendMessage } from '../../../utils/requester';
@@ -55,19 +56,28 @@ class Chat extends Component {
     render() {
         const { navigate } = this.props.navigation;
         const dicti = [{
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
             key: 'sender',
             value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
             field: 'ios',
             date: '12 Jan'
         },{
+            avatar_url: 'http://i0.kym-cdn.com/entries/icons/original/000/006/993/nickcage.jpg',
             key: 'sender',
             value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
             field: 'android',
             date: '15 Jan'
         },{
+            avatar_url: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
             key: 'sender',
             value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
             field: 'ios',
+            date: '15 Jan'
+        },{
+            avatar_url: 'http://i0.kym-cdn.com/entries/icons/original/000/006/993/nickcage.jpg',
+            key: 'sender',
+            value: 'Hi Jaime! We are interseted in booking your place during our vacation . \nJesse',
+            field: 'android',
             date: '15 Jan'
         },];
 
@@ -100,12 +110,12 @@ class Chat extends Component {
                 <FlatList style={styles.listBg}
                     data={dicti}// Data source
                     renderItem={({ item }) =>
-                        (<View>{/* Main View inside flat list */}
+                        (
+                        <View>{/* Main View inside flat list */}
                             
                             <View style={item.field === 'ios' ? styles.rowStyle : styles.hiddenRow}>{/* User 1 View inside flat list */}
-                                <Image style={item.field === 'ios' && styles.imageStyle} source={{
-                                        uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'
-                                    }}
+                                <Image style={item.field === 'ios' && styles.imageStyle} 
+                                source={{uri: item.avatar_url}}
                                 />
                                 <View style={item.field === 'ios' && styles.viewStyle}>
                                 <Text style={item.field === 'ios' && styles.listChild}>{item.field === 'ios' && item.value}</Text>
@@ -117,15 +127,15 @@ class Chat extends Component {
                                     <Text style={item.field === 'android' && styles.listChildSender}>{item.field === 'android' && item.value}</Text>
                                     <Text style={item.field === 'android' && styles.listChildSender}>{item.field === 'android' && item.date}</Text>
                                 </View>
-                                <Image style={item.field === 'android' &&
-                                 styles.imageStyleSender} 
-                                 source={{uri: 'https://facebook.github.io/react-native/docs/assets/favicon.png'}}/>
+                                <Image style={item.field === 'android' && styles.imageStyleSender} 
+                                 source={{uri: item.avatar_url}}/>
 
                             </View>
 
                             
 
-                        </View>)
+                        </View>
+                        )
                     }
                 />
 

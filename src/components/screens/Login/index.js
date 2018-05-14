@@ -16,7 +16,6 @@ import SmartInput from '../../atoms/SmartInput';
 import { domainPrefix } from '../../../config';
 import { validateEmail, validatePassword } from '../../../utils/validation';
 import { login } from '../../../utils/requester';
-
 import styles from './styles';
 
 

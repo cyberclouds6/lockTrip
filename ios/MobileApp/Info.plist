@@ -14,26 +14,6 @@
 	<array>
 		<string>FuturaStd-Light.otf</string>
 		<string>FontAwesome.otf</string>
-		<string>futur.ttf</string>
-		<string>Futura Bold font.ttf</string>
-		<string>Futura Bold Italic font.ttf</string>
-		<string>Futura Book font.ttf</string>
-		<string>Futura Book Italic font.ttf</string>
-		<string>Futura Extra Black font.ttf</string>
-		<string>Futura Heavy font.ttf</string>
-		<string>Futura Heavy Italic font.ttf</string>
-		<string>futura light bt.ttf</string>
-		<string>Futura Light font.ttf</string>
-		<string>Futura Light Italic font.ttf</string>
-		<string>futura medium bt.ttf</string>
-		<string>futura medium condensed bt.ttf</string>
-		<string>Futura Medium Italic font.ttf</string>
-		<string>Futura XBlk BT.ttf</string>
-		<string>Futura-CondensedLight.otf</string>
-		<string>tt0205m_.ttf</string>
-		<string>unicode.futurab.ttf</string>
-		<string>unicode.futurabb.ttf</string>
-		<string>Futura-Light-font.ttf</string>
 		<string>futur.otf</string>
 		<string>Futura Bold font.otf</string>
 		<string>Futura Bold Italic font.otf</string>
@@ -52,6 +32,17 @@
 		<string>tt0205m_.otf</string>
 		<string>unicode.futurab.otf</string>
 		<string>unicode.futurabb.otf</string>
+		<string>Entypo.ttf</string>
+		<string>EvilIcons.ttf</string>
+		<string>Feather.ttf</string>
+		<string>FontAwesome.ttf</string>
+		<string>Foundation.ttf</string>
+		<string>Ionicons.ttf</string>
+		<string>MaterialCommunityIcons.ttf</string>
+		<string>MaterialIcons.ttf</string>
+		<string>Octicons.ttf</string>
+		<string>SimpleLineIcons.ttf</string>
+		<string>Zocial.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>

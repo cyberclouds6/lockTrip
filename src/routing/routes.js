@@ -2,19 +2,19 @@ import { StackNavigator, TabNavigator, SwitchNavigator } from 'react-navigation'
 
 import AppLoading from '../components/app/AppLoading';
 
-import Welcome from '../components/screens/Welcome';
-import Login from '../components/screens/Login';
-import CreateAccount from '../components/screens/CreateAccount';
-import CreatePassword from '../components/screens/CreatePassword';
-import Terms from '../components/screens/Terms';
+import Welcome from '../components/screens/welcome';
+import Login from '../components/screens/login';
+import CreateAccount from '../components/screens/createAccount';
+import CreatePassword from '../components/screens/createPassword';
+import Terms from '../components/screens/terms';
 import Inbox from '../components/screens/message/Inbox';
 import Chat from '../components/screens/message/Chat';
 
-import Profile from '../components/screens/Profile/index';
-import Favourites from '../components/screens/Favorites/index';
-import MyTrips from '../components/screens/MyTrips/index';
+import Profile from '../components/screens/profile/index';
+import Favourites from '../components/screens/favorites/index';
+import MyTrips from '../components/screens/myTrips/index';
 
-import Explore from '../components/screens/Explore';
+import Explore from '../components/screens/explore';
 import NavTabBar from '../components/organisms/NavTabBar';
 
 
