@@ -136,9 +136,8 @@ const styles = StyleSheet.create({
         fontWeight: '100'
     },
     backButton: {
-        height: 120,
-        padding: 15,
-        // justifyContent: 'center'
+        marginLeft: 10,
+        marginBottom: 40
     },
     backButtonIcon: {
         fontSize: 22
@@ -158,10 +157,10 @@ const styles = StyleSheet.create({
         paddingBottom: 20,
     },
     btn_backImage:{
-        height: 28,
-        width: 28,
+        height: 50,
+        width: 50,
         marginTop: 24,
-        marginLeft: 16,
+        resizeMode: 'contain'
       },
 });
 

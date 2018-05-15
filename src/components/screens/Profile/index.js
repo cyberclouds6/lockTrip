@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Image, StyleSheet, Text, View, FlatList, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, FlatList, TouchableOpacity, ScrollView } from 'react-native';
 import styles from './styles';
-
+import Image from 'react-native-remote-svg';
 
 class Profile extends Component {
     constructor() {
@@ -77,7 +77,7 @@ class Profile extends Component {
         return (
             <View style={styles.container}>
                 <TouchableOpacity onPress={this.onBackPress} style={styles.backButton}>
-                    <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-black.png')} />
+                    <Image style={styles.btn_backImage} source={require('../../../../src/assets/svg/arrow-back.svg')} />
                 </TouchableOpacity>
                 <ScrollView>
                     <View style={styles.cardContainer}>
@@ -121,9 +121,9 @@ class Profile extends Component {
                                         <Text style={styles.listItemText}>{item.name}</Text>
                                     </View>
                                     <View style={styles.listItemIconWrapper}>
-                                    <Image 
+                                    <Image
                                         style={item.icon !== 'null' && styles.menuIcons}
-                            
+
                                         source={item.icon !== 'null' && item.route}
                                     />
                                     <Text style={styles.currencyText}>{item.icon === 'null' & item.name === 'Currency'? 'USD' : ''}</Text>
