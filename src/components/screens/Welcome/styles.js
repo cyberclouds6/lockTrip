@@ -80,6 +80,15 @@ const styles = StyleSheet.create({
     },
     appNameRight: {
         marginLeft: -8
+    },
+    closeButtonWrapper: {
+        position: 'absolute',
+        left: 20,
+        top: 45
+    },
+    closeButton: {
+        width: 25,
+        height: 25
     }
 });
 

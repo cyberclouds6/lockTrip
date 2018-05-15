@@ -31,6 +31,11 @@ const Welcome = ({
 }) => (
     <View style={styles.container}>
         <GoBack />
+        <View style={styles.closeButtonWrapper}>
+            <Image
+                source={require('../../../assets/close_white.png')}
+                style={styles.closeButton} />
+        </View>
         <View style={{flexDirection: 'row', flexWrap: 'nowrap'}}>
             <Text style={[styles.appName, styles.appNameLeft]}>L</Text>
             <Image source={appLogo} style={styles.splashImage} />
