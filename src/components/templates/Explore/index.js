@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { AsyncStorage, ScrollView, StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { AsyncStorage, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
 import { getTopHomes } from '../../../utils/requester';
 import DateAndGuestPicker from '../../organisms/DateAndGuestPicker';
 import SearchBar from '../../molecules/SearchBar';
 import SmallPropertyTile from '../../molecules/SmallPropertyTile';
 import SplashScreen from 'react-native-smart-splash-screen';
-
+import Image from 'react-native-remote-svg';
 
 // TODO: move styles in separate file
 const styles = StyleSheet.create({
@@ -102,11 +102,12 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         alignItems: 'center',
         backgroundColor: '#ffffff',
+        paddingTop: 15
     },
     btn_SettingImages:{
         height: 25,
         width: 25,
-        marginTop: 14,
+        resizeMode: 'contain'
     },
     btnSearch:{
         margin: 10,
