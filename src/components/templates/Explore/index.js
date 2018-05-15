@@ -51,14 +51,14 @@ const styles = StyleSheet.create({
         color: '#000'
     },
     section1 : {
-        flex: 0, 
+        flex: 0,
         flexDirection: 'row',
         justifyContent: 'space-between',
         marginLeft: 18,
         marginRight: 18,
         },
     dateView:{
-        flex: 1, 
+        flex: 1,
         backgroundColor: '#fff',
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -200,7 +200,7 @@ class Explore extends Component {
                         value={search}
                         onChangeText={this.onChangeHandler('search')}
                         placeholder="Discover your next experience"
-                        placeholderTextColor="#bdbdbd"
+                        placeholderTextColor="#767678"
                         leftIcon="search"
                     />
                 </View>
