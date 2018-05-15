@@ -181,10 +181,9 @@ const styles = StyleSheet.create({
         marginRight: 10,
       },
       btn_backImage:{
-        height: 28,
-        width: 28,
-        marginTop: 24,
-        marginLeft: 16,
+        height: 25,
+        width: 25,
+        resizeMode: 'contain'
       },
       dateWrapper: {
         flexDirection: 'row',

@@ -86,8 +86,8 @@ class Chat extends Component {
 
                 <View style={styles.chatToolbar}>
 
-                <TouchableOpacity onPress={this.onBackPress}>
-                    <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-black.png')} />
+                <TouchableOpacity onPress={this.onBackPress} style={{marginTop: 45, marginLeft: 15, marginBottom: 0}}>
+                    <Image style={styles.btn_backImage} source={require('../../../../src/assets/svg/arrow-back.svg')} />
                 </TouchableOpacity>
 
                 </View>
