@@ -10,8 +10,9 @@ import Image from 'react-native-remote-svg';
 import GoBack from '../../atoms/GoBack';
 import Button from '../../atoms/Button';
 
-import SplashPNG from '../../../assets/splash.png';
+import appLogo from '../../../assets/logo_white.png';
 import styles from './styles';
+import SplashScreen from 'react-native-smart-splash-screen';
 
 const propTypes = {
     navigation: PropTypes.shape({
@@ -19,12 +20,22 @@ const propTypes = {
     }).isRequired
 };
 
+SplashScreen.close({
+    animationType: SplashScreen.animationType.scale,
+    duration: 0,
+    delay: 0,
+})
+
 const Welcome = ({
     navigation: { navigate }
 }) => (
     <View style={styles.container}>
         <GoBack />
-        <Image source={SplashPNG} style={styles.splashImage} />
+        <View style={{flexDirection: 'row', flexWrap: 'nowrap'}}>
+            <Text style={[styles.appName, styles.appNameLeft]}>L</Text>
+            <Image source={appLogo} style={styles.splashImage} />
+            <Text style={[styles.appName, styles.appNameRight]}>KTrip</Text>
+        </View>
         <Text style={styles.titleText}>Welcome</Text>
         <View style={styles.buttonCollectionWrap}>
             <Button

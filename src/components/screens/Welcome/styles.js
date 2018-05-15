@@ -9,9 +9,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#DA7B61'
     },
     splashImage: {
-        width: 100,
-        height: 78,
-        marginTop: 4
+        width: 80,
+        height: 58
     },
     buttonCollectionWrap: {
         display: 'flex',
@@ -69,6 +68,18 @@ const styles = StyleSheet.create({
     },
     facebookButtonText:{
         color: '#fff'
+    },
+    appName: {
+        fontSize: 41,
+        fontWeight: 'bold',
+        color: '#fff',
+        marginTop: 4
+    },
+    appNameLeft: {
+        marginRight: -8
+    },
+    appNameRight: {
+        marginLeft: -8
     }
 });
 
