@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
 
     mainMenu:{
         marginHorizontal: 15,
+        marginTop: 12
     },
 
     InboxView: {
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
         width: 50,
         borderRadius: 25,
     },
-    
+
     messageBox:{
        width: '82%',
     },
@@ -74,9 +75,10 @@ const styles = StyleSheet.create({
     messageValues:{
         fontFamily: 'FuturaStd-Light',
         fontSize: 14,
-        lineHeight: 24,
+        lineHeight: 18,
         letterSpacing: 1,
-        backgroundColor: 'transparent'
+        backgroundColor: 'transparent',
+        color: '#555759'
     },
 
     review:{
