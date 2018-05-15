@@ -17,6 +17,7 @@ import { domainPrefix } from '../../../config';
 import { validateEmail, validatePassword } from '../../../utils/validation';
 import { login } from '../../../utils/requester';
 import styles from './styles';
+import SplashScreen from 'react-native-smart-splash-screen';
 
 
 class Login extends Component {
@@ -30,6 +31,14 @@ class Login extends Component {
     state = {
         email: '',
         password: ''
+    }
+
+    componentDidMount() {
+        SplashScreen.close({
+            animationType: SplashScreen.animationType.scale,
+            duration: 850,
+            delay: 500,
+        })
     }
 
     // TODO: Need a way to generate a Google ReCAPTCHA token
@@ -78,7 +87,7 @@ class Login extends Component {
             >
                 <View style={styles.container}>
                     <View style={styles.chatToolbar}>
-                
+
                         <TouchableOpacity onPress={this.onBackPress}>
                             <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-white.png')} />
                         </TouchableOpacity>
