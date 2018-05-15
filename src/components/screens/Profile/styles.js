@@ -145,11 +145,11 @@ const styles = StyleSheet.create({
         fontSize: 22
     },
     menuIcons:{
-        width: '45%',
-        height: '45%',
+        width: 20,
+        height: 23,
         alignItems: 'center',
         position: 'relative',
-        margin: 0,
+        resizeMode: 'contain'
     },
     currencyText:{
         fontFamily: 'FuturaStd-Light',
