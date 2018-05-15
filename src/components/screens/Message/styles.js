@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
         marginTop: 30,
         height: 180,
         borderBottomWidth: 1,
-        borderBottomColor: '#cccccc',
+        borderBottomColor: '#e1e1e1',
         marginBottom: 20,
       },
       requestTo:{
