@@ -152,8 +152,6 @@ const styles = StyleSheet.create({
         height: 80,
         backgroundColor: '#f0f1f3',
         flexDirection: 'row',
-        borderTopColor: '#cccccc',
-        borderTopWidth: 1,
         alignItems: 'center'
       },
       footerInputText: {
