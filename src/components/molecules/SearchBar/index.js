@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
+import Image from 'react-native-remote-svg';
 import PropTypes from 'prop-types';
 
 // TODO: move styles in saparate file
@@ -31,6 +32,9 @@ const styles = StyleSheet.create({
         color: '#000',
         fontSize: 17,
         fontFamily: 'FuturaStd-Light'
+    },
+    placeholderThumbView: {
+        paddingTop: 16
     }
 });
 
@@ -61,9 +65,9 @@ class SearchBar extends Component {
         if (leftIcon) {
             renderButton = (
                 <View style={styles.leftIconView}>
-                    <Text style={styles.leftIconText}>
-                        <FontAwesome>{Icons[leftIcon]}</FontAwesome>
-                    </Text>
+                    <View style={styles.placeholderThumbView}>
+                        <Image style={{width: 18, height: 16}} source={require('../../../assets/svg/NavBar/explore.svg')} resizeMode="contain"/>
+                    </View>
                 </View>
             );
         }
