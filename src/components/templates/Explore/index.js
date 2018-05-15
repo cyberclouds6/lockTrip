@@ -104,9 +104,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
     },
     btn_SettingImages:{
-        height: 28,
-        width: 28,
-        marginTop: 12,
+        height: 25,
+        width: 25,
+        marginTop: 14,
     },
     btnSearch:{
         margin: 10,
@@ -212,7 +212,7 @@ class Explore extends Component {
                     <TouchableOpacity style={styles.btnCheckOutDate}><Text style={styles.btn_text}>Check Out</Text><Text style={styles.btn_subtext}>-----</Text></TouchableOpacity>
                     </View>
                     <TouchableOpacity style={styles.btnGuests}><Text style={styles.btn_text}>Guests</Text><Text style={styles.btn_subtext}>------</Text></TouchableOpacity>
-                    <TouchableOpacity style={styles.btnSettings}><Image style={styles.btn_SettingImages} source={require('../../../../src/assets/icons/settings.png')} /></TouchableOpacity>
+                    <TouchableOpacity style={styles.btnSettings}><Image style={styles.btn_SettingImages} source={require('../../../../src/assets/svg/filters.svg')} /></TouchableOpacity>
                 </View>
 
                     <TouchableOpacity style={styles.btnSearch}><Text style={styles.searchText}>Search</Text></TouchableOpacity>
