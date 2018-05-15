@@ -4,7 +4,6 @@ import {
  Platform,
     Text,
     View,
-    Image,
     FlatList,
     TextInput,
     KeyboardAvoidingView,
@@ -12,6 +11,7 @@ import {
     ToolbarAndroid,
     Button
 } from 'react-native';
+import Image from 'react-native-remote-svg';
 import {ListItem,Avatar} from 'react-native-elements';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 import ImagePicker from 'react-native-image-picker';
