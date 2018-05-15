@@ -19,19 +19,19 @@ class Profile extends Component {
                 {
                     key: 1,
                     name: 'Edit Profile',
-                    route: require('../../../assets/icons/edit-profile.png'),
+                    route: require('../../../assets/svg/edit-profile.svg'),
                     icon: 'user'
                 },
                 {
                     key: 2,
                     name: 'Notifications',
-                    route: require('../../../assets/icons/notifications.png'),
+                    route: require('../../../assets/svg/notifications.svg'),
                     icon: 'bell'
                 },
                 {
                     key: 3,
                     name: 'Payment Methods',
-                    route: require('../../../assets/icons/payment.png'),
+                    route: require('../../../assets/svg/payment.svg'),
                     icon: 'wallet'
                 },
                 {
@@ -43,7 +43,7 @@ class Profile extends Component {
                 {
                     key: 5,
                     name: 'Switch to Hosting',
-                    route: require('../../../assets/icons/switch.png'),
+                    route: require('../../../assets/svg/switch.svg'),
                     icon: 'refresh'
                 },
                 {
