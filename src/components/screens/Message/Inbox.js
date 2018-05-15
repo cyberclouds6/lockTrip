@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Image, ScrollView  } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView  } from 'react-native';
+import Image from 'react-native-remote-svg';
 import FontAwesome, { Icons } from 'react-native-fontawesome';
 //import Image from 'react-native-remote-svg';
 //import GoBack from '../common/GoBack';
@@ -28,7 +29,7 @@ class Inbox extends Component {
             navigate: () => {}
         }
     }
-    
+
     //TODO: We have to change type of list view to flat list
     constructor(props) {
         super(props);
@@ -84,22 +85,22 @@ class Inbox extends Component {
     render() {
         const { navigate } = this.props.navigation;
         return (
-            
+
             <View style={styles.InboxView}>{/*Main container*/}
-                
+
                 <View style={styles.chatToolbar}>{/*Toolbar container*/}
-                    <TouchableOpacity onPress={this.onBackPress}>
-                        <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-black.png')} />
+                    <TouchableOpacity onPress={this.onBackPress} style={{marginTop: 45, marginLeft: 15, marginBottom: 20}}>
+                        <Image style={styles.btn_backImage} source={require('../../../../src/assets/svg/arrow-back.svg')} />
                     </TouchableOpacity>
                 </View>{/*End of Toolbar container*/}
-                    
+
                 <ScrollView>{/*Scroll View container*/}{/*To be changed to flat list*/}
-        
+
                     <View style={styles.mainMenu}>
                         <Text style={styles.heading}>Inbox</Text>
                         <Text style={styles.subHeading}>You have 3 unread messages</Text>
                     </View>
-                    
+
                         <View style={styles.container}>
                             {
                                 this.state.dataSource.map((item, index) => {
@@ -122,7 +123,7 @@ class Inbox extends Component {
                                                                 <View style={[styles.statusView]}></View>
                                                             </View>
                                                         </View>
-                                                            
+
                                                         <Text style={[styles.messageSubTitle,{marginBottom:2, marginTop:5}]}>{item.date}</Text>
                                                         <Text style={[styles.messageSubTitle]}>{item.venue}</Text>
                                                     </View>
@@ -162,7 +163,7 @@ class Inbox extends Component {
                             }
                         </View>
                     </ScrollView>
-            
+
             {/*End of Main container*/}</View>
         );
     }

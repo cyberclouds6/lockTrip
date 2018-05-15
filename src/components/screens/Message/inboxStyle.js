@@ -133,11 +133,9 @@ const styles = StyleSheet.create({
     },
 
     btn_backImage:{
-        height: 28,
-        width: 28,
-        marginTop: 30,
-        marginLeft: 16,
-        marginBottom: 20,
+        height: 25,
+        width: 25,
+        resizeMode: 'contain'
       },
       userView:{
           marginTop: 5,
