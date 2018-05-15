@@ -11,8 +11,9 @@ const styles = StyleSheet.create({
         marginTop: 40
     },
     placeholderImage: {
-        width: 195,
-        height: 195
+        width: 210,
+        height: 210,
+        marginTop: 30
     },
     title: {
         fontFamily: 'futura',
@@ -23,7 +24,7 @@ const styles = StyleSheet.create({
         fontFamily: 'FuturaStd-Light',
         fontSize: 16,
         marginTop: 8,
-        color: '#1f2427'
+        color: '#767b7d'
     },
     buttonExplore: {
         backgroundColor: '#cc8068',

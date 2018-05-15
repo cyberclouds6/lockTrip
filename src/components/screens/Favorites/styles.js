@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     placeholderImage: {
         width: 195,
         height: 195,
+        marginTop: 30
     },
     title: {
         color: '#1f2427',
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
         marginTop: 20,
         width: '80%',
-        color: '#8a8a8a',
+        color: '#767b7d',
         textAlign: 'center'
     },
     buttonDiscover: {
