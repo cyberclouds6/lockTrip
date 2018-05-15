@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         borderWidth: 1.5
     },
     facebookButton: {
-        backgroundColor: 'black',
+        backgroundColor: '#233842',
         flexDirection: 'row',
         height: 50,
         borderRadius: 30,
