@@ -83,9 +83,9 @@ class Chat extends Component {
 
         return (
             <KeyboardAvoidingView style={styles.container} behavior={(Platform.OS === 'ios') ? 'padding' : null} enabled>
-                
+
                 <View style={styles.chatToolbar}>
-                
+
                 <TouchableOpacity onPress={this.onBackPress}>
                     <Image style={styles.btn_backImage} source={require('../../../../src/assets/icons/icon-back-black.png')} />
                 </TouchableOpacity>
@@ -95,7 +95,13 @@ class Chat extends Component {
                 <View style={styles.requestView}>
                     <Text style={styles.requestTo}>Conversation with Jesse</Text>
                     <Text style={styles.requestTitle}>Garden Left Apartment</Text>
-                    <Text style={styles.requestDate}>Thu 25 Jan - Sat 27 Jan . 2 guests . $615</Text>
+                    <View style={styles.dateWrapper}>
+                        <Text style={styles.dateText}>Thu 25 Jan - Sat 27 Jan</Text>
+                        <SeparatorDot height={25} width={15}/>
+                        <Text style={styles.dateText}>2 guests</Text>
+                        <SeparatorDot height={26} width={15}/>
+                        <Text style={styles.price}>$615 </Text>
+                    </View>
                     <View style={styles.requestButtonView}>
                         <TouchableOpacity style={styles.btn_requestapproveView}>
                             <Text style={styles.btn_requestapprove}>Approve</Text>
@@ -103,7 +109,7 @@ class Chat extends Component {
                         <TouchableOpacity style={styles.btn_requestdeclineView}>
                             <Text style={styles.btn_requestdecline}>Decline</Text>
                         </TouchableOpacity>
-                    
+
                     </View>
                 </View>
 
@@ -112,9 +118,9 @@ class Chat extends Component {
                     renderItem={({ item }) =>
                         (
                         <View>{/* Main View inside flat list */}
-                            
+
                             <View style={item.field === 'ios' ? styles.rowStyle : styles.hiddenRow}>{/* User 1 View inside flat list */}
-                                <Image style={item.field === 'ios' && styles.imageStyle} 
+                                <Image style={item.field === 'ios' && styles.imageStyle}
                                 source={{uri: item.avatar_url}}
                                 />
                                 <View style={item.field === 'ios' && styles.viewStyle}>
@@ -127,12 +133,12 @@ class Chat extends Component {
                                     <Text style={item.field === 'android' && styles.listChildSender}>{item.field === 'android' && item.value}</Text>
                                     <Text style={item.field === 'android' && styles.listChildSender}>{item.field === 'android' && item.date}</Text>
                                 </View>
-                                <Image style={item.field === 'android' && styles.imageStyleSender} 
+                                <Image style={item.field === 'android' && styles.imageStyleSender}
                                  source={{uri: item.avatar_url}}/>
 
                             </View>
 
-                            
+
 
                         </View>
                         )
@@ -200,6 +206,14 @@ class Chat extends Component {
         })
         console.log('api hit');
     }
+}
+
+function SeparatorDot(props) {
+    return (
+        <View style={{height: props.height, width: props.width, alignItems: 'center', justifyContent: 'center'}}>
+            <View style={{height: 3, width: 3, backgroundColor: '#000', borderRadius: 1.5}}></View>
+        </View>
+    )
 }
 
 export default Chat;

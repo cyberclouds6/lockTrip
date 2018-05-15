@@ -187,6 +187,22 @@ const styles = StyleSheet.create({
         width: 28,
         marginTop: 24,
         marginLeft: 16,
+      },
+      dateWrapper: {
+        flexDirection: 'row',
+        marginLeft: 16
+      },
+      dateText: {
+        fontFamily: 'FuturaStd-Light',
+        fontSize: 13,
+        marginTop: 5,
+        color: '#1f2427'
+      },
+      price: {
+        fontSize: 13,
+        marginTop: 5,
+        color: '#1f2427',
+        fontWeight: '300'
       }
 });
 
