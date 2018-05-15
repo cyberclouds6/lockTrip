@@ -38,10 +38,9 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     FAB: {
-        fontFamily: 'FuturaStd-Light',
         color: '#fff',
         fontSize: 26,
-        fontWeight: 'bold',
+        fontWeight: '800',
         lineHeight: 36
     },
     cardContentsWrapper: {
